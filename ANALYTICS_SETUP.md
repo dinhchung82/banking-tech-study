@@ -34,7 +34,7 @@ shows *who* someone is. To learn who is interested, use the CTA / form below.
 3. After verification: **Performance** shows impressions, clicks and queries.
    This is the only free way to see the search terms that bring visitors.
 
-## 3) Lead-capture form (optional, picks up interest)
+## 3) Lead-capture form (optional, picks up interest) ✅ ACTIVE — Tally `https://tally.so/r/5X4Op6`
 
 The CTA blocks already offer email + LinkedIn. To add a real form, set one URL in
 `assets/cta.js`:

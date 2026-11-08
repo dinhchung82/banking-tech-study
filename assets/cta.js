@@ -2,7 +2,7 @@
  * Set window.STUDY_CTA.formUrl to a Tally / Google Form / FormSubmit URL.
  * Pages containing <li data-study-form> will show it only when configured.
  */
-window.STUDY_CTA = window.STUDY_CTA || { formUrl: "" };
+window.STUDY_CTA = window.STUDY_CTA || { formUrl: "https://tally.so/r/5X4Op6" };
 (function () {
   var cfg = window.STUDY_CTA;
   var url = (cfg.formUrl || "").trim();
