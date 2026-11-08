@@ -3,7 +3,9 @@
 The site is static on GitHub Pages, which provides **no visitor analytics**.
 This repo uses two small, privacy-friendly switches you can turn on later.
 
-## 1) GoatCounter — visitor analytics (no cookies, no personal data)
+## 1) GoatCounter — visitor analytics (no cookies, no personal data) ✅ ACTIVE
+
+**Status: activated with code `dinhchung82` — dashboard: https://dinhchung82.goatcounter.com**
 
 1. Register a free code at https://www.goatcounter.com (e.g. `chungvu`).
 2. Edit `assets/analytics.js` and set one line:
