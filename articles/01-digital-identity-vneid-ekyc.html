@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Identity in Vietnam's Financial Institutions — Study</title>
+<meta name="description" content="VNeID, eKYC and biometric authentication in Vietnam's banks: a five-layer architecture view and five assessment questions.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="eyebrow">Article · Digital identity</div>
+    <h1>Digital Identity in Vietnam's Financial Institutions: From VNeID to Production-Grade eKYC</h1>
+    <p class="meta" style="color:#c7d2e0">Vu Dinh Chung · IT Director, Banking &amp; Financial Services · Updated 2026-11</p>
+    <nav class="top"><a href="../index.html">← Back to study</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <article class="card">
+    <p>Vietnam has quietly built one of the most ambitious digital identity infrastructures in the region. VNeID now holds more than 102 million identity records with over 71.5 million activated accounts. For banks and finance companies, this is not a "nice to have" integration — it is becoming the foundation of onboarding, authentication and fraud control.</p>
+    <p>This is how I look at digital identity in a financial institution: not as a feature, but as an architecture and governance problem.</p>
+
+    <h3>1. The regulatory backbone is now real</h3>
+    <ul>
+      <li>The Law on Identification (26/2023/QH15, amended by 118/2025/QH15) and Decree 69/2024/ND-CP (amended by 320/2026/ND-CP) establish the legal basis for electronic identification through VNeID.</li>
+      <li>Circular 17/2024/TT-NHNN replaced the earlier eKYC rules and was amended by Circular 25/2025/TT-NHNN — including face-to-face checks plus biometric matching for standard account opening, and a verified-phone-number requirement for online banking.</li>
+      <li>Biometric verification for online transactions is now governed by Circular 50/2024/TT-NHNN (Annexes 01–04), as amended by Circular 77/2025/TT-NHNN. The earlier Decision 2345/QD-NHNN was repealed by Decision 2872/QD-NHNN (effective 1 January 2025) — a detail many public summaries still get wrong.</li>
+      <li>Personal-data rules changed too: from 1 January 2026, the Law on Personal Data Protection 91/2025/QH15 and Decree 356/2025/ND-CP replace Decree 13/2023 — adding DPIA obligations, 72-hour breach notification and cross-border transfer impact assessments.</li>
+    </ul>
+
+    <h3>2. What actually changes in the architecture</h3>
+    <p>In my experience, identity touches at least five layers:</p>
+    <ul>
+      <li><strong>Channel</strong> — mobile app, web, agent-assisted onboarding.</li>
+      <li><strong>Identity service</strong> — eKYC orchestration, biometric matching, liveness detection.</li>
+      <li><strong>Data</strong> — the identity record (VNeID data, document OCR, face templates, consents).</li>
+      <li><strong>Core</strong> — CIF/customer master, account and product provisioning.</li>
+      <li><strong>Risk &amp; fraud</strong> — device intelligence, velocity rules, watchlists, case management.</li>
+    </ul>
+    <p>Most failures I have seen were not failures of face-matching accuracy. They were failures of orchestration: five layers, four vendors, no single owner of the customer identity lifecycle.</p>
+
+    <h3>3. Five questions I use to assess an eID/eKYC programme</h3>
+    <ul>
+      <li><strong>Single source of truth</strong> — is the identity of record in the core banking CIF, or in the onboarding vendor's database?</li>
+      <li><strong>Consent and data lifecycle</strong> — where is consent captured, how is it proven, and what is the retention/deletion policy?</li>
+      <li><strong>Failure design</strong> — what happens when biometric matching fails, when VNeID is unavailable, when the network drops mid-onboarding? Straight-through rate is a design decision, not luck.</li>
+      <li><strong>Fraud economics</strong> — what is the cost per fraudulent account prevented versus the drop-off of genuine customers? Both numbers must exist.</li>
+      <li><strong>Auditability</strong> — can you reconstruct, months later, exactly which identity evidence was used for a specific account?</li>
+    </ul>
+
+    <h3>4. The governance angle</h3>
+    <p>Identity is the only system where the product, operations, fraud, legal, data protection and the regulator all have a stake. An IT Director's job is to make one accountable owner, one data model and one set of controls — then let the business innovate on top.</p>
+
+    <h3>5. Where this is going</h3>
+    <ul>
+      <li>Identity moves from "onboarding" to "every interaction": step-up authentication, transaction signing, consent management.</li>
+      <li>Reusable identity (KYC once, use many times) reduces cost — but only where data-sharing consent and audit trails are engineered properly.</li>
+      <li>The winners will treat identity as a <em>platform with an owner</em>, not as a vendor integration.</li>
+    </ul>
+
+    <hr>
+    <h3>Bản tiếng Việt (tóm tắt)</h3>
+    <p>VNeID hiện có hơn 102 triệu hồ sơ định danh và hơn 71,5 triệu tài khoản kích hoạt. Với ngân hàng, định danh số không còn là "tích hợp cho đẹp" mà là nền tảng của onboarding, xác thực và chống gian lận.</p>
+    <p><strong>Lưu ý pháp lý (cập nhật 11/2026):</strong> QĐ 2345/QĐ-NHNN <strong>đã bị bãi bỏ</strong> (QĐ 2872/QĐ-NHNN, hiệu lực 01/01/2025); khung xác thực sinh trắc học hiện hành là <strong>TT 50/2024/TT-NHNN (Phụ lục 01–04), sửa bởi TT 77/2025</strong>. Mở tài khoản thanh toán theo <strong>TT 17/2024</strong> (sửa bởi <strong>TT 25/2025</strong>); dữ liệu cá nhân theo <strong>Luật 91/2025/QH15 + NĐ 356/2025/NĐ-CP</strong> (từ 01/01/2026, thay NĐ 13/2023) với nghĩa vụ DPIA và báo lộ dữ liệu nhạy cảm trong 72 giờ.</p>
+    <p><strong>Năm lớp kiến trúc:</strong> Kênh → Dịch vụ định danh (eKYC, so khớp sinh trắc, liveness) → Dữ liệu → Core (CIF) → Rủi ro &amp; gian lận.</p>
+    <p><strong>Năm câu hỏi đánh giá:</strong> (1) nguồn định danh gốc ở đâu; (2) consent &amp; vòng đời dữ liệu; (3) thiết kế khi thất bại; (4) chi phí gian lận so với tỷ lệ bỏ ngang; (5) khả năng kiểm toán/tái hiện hồ sơ.</p>
+    <blockquote>Lỗi hiếm khi nằm ở độ chính xác so khớp khuôn mặt. Lỗi nằm ở điều phối: 5 lớp, 4 nhà cung cấp, không ai chịu trách nhiệm trọn vòng đời định danh khách hàng.</blockquote>
+  </article>
+  <p class="meta" style="margin-top:18px">Sources (verified 11/2026): VNeID adoption figures (public reporting, 2026); Law on Identification 26/2023/QH15 (amended 118/2025/QH15); Decree 69/2024/ND-CP (amended 320/2026/ND-CP); Circular 17/2024/TT-NHNN and Circular 25/2025/TT-NHNN; Circular 50/2024/TT-NHNN and Circular 77/2025/TT-NHNN; Decision 2872/QD-NHNN (repealing Decision 2345/QD-NHNN); Law on Personal Data Protection 91/2025/QH15 and Decree 356/2025/ND-CP. Views are my own — verify original legal texts before relying on them.</p>
+</main>
+<footer class="site"><div class="wrap">Study hub · Vu Dinh Chung · Views are my own.</div></footer>
+</body>
+</html>

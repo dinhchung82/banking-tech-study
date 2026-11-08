@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Từ 15/11/2026, AI trong ngân hàng có luật riêng: 8 việc phải xong trước ngày hiệu lực</title>
+<meta name="description" content="Luật Trí tuệ nhân tạo 134/2025/QH15, Nghị định 142/2026/NĐ-CP và Thông tư 53/2026/TT-NHNN — phân loại rủi ro AI, kiểm soát con người, kiểm thử an ninh, dữ liệu, versioning và xử lý sự cố trong ngân hàng.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="eyebrow">Article · AI governance · Banking</div>
+    <h1>Từ 15/11/2026, AI trong ngân hàng có luật riêng: 8 việc phải xong trước ngày hiệu lực</h1>
+    <p class="meta" style="color:#c7d2e0">Vũ Đình Chung · IT Director, Banking &amp; Financial Services · Cập nhật 08/11/2026</p>
+    <nav class="top"><a href="../index.html">← Back to study</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <article class="card">
+    <p><em>English abstract: Vietnam now has a dedicated AI law (Law 134/2025/QH15, effective 1 March 2026), implementing Decree 142/2026/ND-CP, and — for banking specifically — SBV Circular 53/2026/TT-NHNN on AI safety and risk management (effective 15 November 2026). This is the practitioner checklist I would use to be ready: inventory, risk classification, human oversight, AI security testing, data provenance, model versioning, incident response, third-party risk.</em></p>
+
+    <h3>1. Ba văn bản, ba tầng nghĩa vụ</h3>
+    <table>
+      <thead><tr><th>Văn bản</th><th>Hiệu lực</th><th>Vai trò</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Luật Trí tuệ nhân tạo 134/2025/QH15</strong></td><td><strong>01/03/2026</strong></td><td>Khung luật chung: phân loại rủi ro 3 mức (cao / trung bình / thấp), hành vi bị cấm, nguyên tắc (AI phục vụ con người; không thay thế thẩm quyền &amp; trách nhiệm của con người; công bằng, minh bạch, giải trình)</td></tr>
+        <tr><td><strong>NĐ 142/2026/NĐ-CP</strong></td><td>2026</td><td>Quy định chi tiết thi hành Luật AI</td></tr>
+        <tr><td><strong>TT 53/2026/TT-NHNN</strong> — an toàn &amp; quản lý rủi ro AI trong ngân hàng</td><td><strong>15/11/2026</strong> (Điều 14 từ 01/01/2027; điểm b khoản 1 Điều 6 và Điều 21 từ 01/09/2027)</td><td>Nghĩa vụ cụ thể cho ngân hàng: phạm vi là hệ thống AI <em>ra quyết định hoặc hỗ trợ ra quyết định trong hoạt động nghiệp vụ cung cấp dịch vụ cho khách hàng</em></td></tr>
+      </tbody>
+    </table>
+    <p>Điểm quan trọng: TT 53/2026 không phải "khuyến nghị". Đây là <strong>điều kiện triển khai</strong> — nghĩa là hệ thống AI đang chạy cũng phải được rà soát, phân loại và đưa vào danh mục, không chỉ hệ thống mới.</p>
+
+    <h3>2. Phân loại rủi ro — việc đầu tiên, không phải việc sau</h3>
+    <ul>
+      <li><strong>Trước khi triển khai</strong>, đơn vị phải phân loại hệ thống AI theo <strong>rủi ro cao / trung bình / thấp</strong> (Điều 4 TT 53/2026), dựa trên quy định pháp luật về AI và danh mục hệ thống AI của đơn vị.</li>
+      <li><strong>Rủi ro cao</strong> gồm các hệ thống <strong>tự động thực hiện giao dịch điện tử</strong> hoặc <strong>quyết định cấp tín dụng giá trị lớn</strong>. Luật AI định nghĩa rủi ro cao là hệ thống có thể gây thiệt hại đáng kể đến tính mạng, sức khỏe, quyền và lợi ích hợp pháp, lợi ích quốc gia, lợi ích công cộng, an ninh quốc gia; rủi ro trung bình là hệ thống có thể gây nhầm lẫn/thao túng người dùng do không nhận biết được chủ thể tương tác là AI hoặc nội dung do AI tạo ra.</li>
+      <li>Phải <strong>lập danh mục và cập nhật danh mục hệ thống AI hằng năm</strong>.</li>
+    </ul>
+    <blockquote>Thực tế tại nhiều tổ chức: AI đã len vào chatbot CSKH, gợi ý hạn mức, xếp hạng thu hồi nợ, OCR hồ sơ… nhưng <strong>không có danh mục</strong>. Không có danh mục thì không thể phân loại, không thể chứng minh tuân thủ.</blockquote>
+
+    <h3>3. Kiểm soát của con người &amp; điều kiện tự động hoá</h3>
+    <ul>
+      <li>Chỉ tự động hoá quyết định khi <strong>pháp luật không buộc phải có sự xem xét/quyết định/phê duyệt của con người</strong>; phải có khả năng <strong>can thiệp, dừng</strong> hệ thống; phải <strong>xác định được giao dịch nào do AI tự động thực hiện, giao dịch nào do con người</strong> (Điều 5).</li>
+      <li>Với <strong>giao dịch thanh toán tự động</strong>: phải có thỏa thuận với khách hàng về việc cho phép hệ thống AI thực hiện, và đáp ứng yêu cầu an toàn theo <strong>TT 50/2024/TT-NHNN</strong> (Phụ lục 01, 03).</li>
+      <li>Với <strong>hệ thống AI tự động quyết định cấp tín dụng</strong>: phải tuân thủ quy định cho vay bằng phương tiện điện tử (TT 39/2016 và TT 29/2026).</li>
+      <li>Hệ thống rủi ro cao cần <strong>công cụ giám sát liên tục</strong> và khả năng can thiệp của con người.</li>
+    </ul>
+
+    <h3>4. An toàn hệ thống AI — kiểm thử theo kịch bản tấn công đặc thù</h3>
+    <p>Điều 6 yêu cầu kiểm tra, đánh giá an ninh mạng <strong>trước khi đưa vào vận hành chính thức</strong>, <strong>định kỳ</strong>, và <strong>khi có thay đổi đáng kể</strong> — bao gồm phòng chống các kịch bản tấn công, rủi ro đặc thù của hệ thống AI. Thông tư định nghĩa các khái niệm như <strong>tấn công trích xuất mô hình</strong> (model extraction) — khai thác giao diện/đầu ra để suy luận, sao chép trái phép cấu trúc, tham số hoặc logic của mô hình.</p>
+    <p>Về thực hành, tôi ánh xạ bộ kiểm thử này với <strong>OWASP Top 10 for LLM Applications</strong> và <strong>MITRE ATLAS</strong>: prompt injection, rò rỉ thông tin nhạy cảm, chuỗi cung ứng, đầu độc dữ liệu, xử lý đầu ra sai, quyền hạn quá mức, rò rỉ system prompt, lỗ hổng vector/embedding, thông tin sai lệch, tiêu thụ tài nguyên không giới hạn.</p>
+
+    <h3>5. Dữ liệu: nguồn gốc hợp pháp, DPIA và chuyển dữ liệu xuyên biên giới</h3>
+    <ul>
+      <li>Dữ liệu dùng để <strong>huấn luyện, kiểm thử, vận hành</strong> phải có <strong>nguồn gốc hợp pháp</strong>, tuân thủ pháp luật dữ liệu, bảo vệ dữ liệu cá nhân và sở hữu trí tuệ (Điều 7).</li>
+      <li>Từ <strong>01/01/2026</strong>, <strong>Luật BVDLCN 91/2025/QH15 + NĐ 356/2025/NĐ-CP</strong> (thay NĐ 13/2023): đồng ý cụ thể, tách bạch; <strong>DPIA</strong> (sinh trắc học là dữ liệu nhạy cảm); báo lộ dữ liệu nhạy cảm <strong>trong 72 giờ</strong>; dùng cloud nước ngoài = chuyển dữ liệu xuyên biên giới → <strong>DPIA + TIA</strong>.</li>
+      <li>Nếu dùng mô hình chấm điểm tín dụng/Open API, xem thêm cơ chế sandbox (<strong>NĐ 94/2025/NĐ-CP</strong>).</li>
+    </ul>
+
+    <h3>6. Quản lý thay đổi, phiên bản mô hình &amp; sự cố</h3>
+    <ul>
+      <li><strong>Điều 8</strong>: quản lý phiên bản đối với mô hình — thông tin phiên bản, thời điểm áp dụng/thay đổi/ngừng sử dụng, phạm vi ảnh hưởng, cấu hình, nhật ký thay đổi, kết quả kiểm tra/đánh giá.</li>
+      <li><strong>Điều 9</strong>: quy trình xử lý sự cố hệ thống AI — gồm sự cố đặc thù và phương án xử lý nghiệp vụ khi hệ thống gặp sự cố; sự cố nghiêm trọng phải kích hoạt ngay các bước ứng cứu.</li>
+      <li><strong>Rủi ro bên thứ ba</strong>: phải đánh giá rủi ro phát sinh từ việc phụ thuộc nhà cung cấp (LLM, nền tảng, dữ liệu) — hợp đồng, data residency, điều khoản dữ liệu.</li>
+    </ul>
+
+    <h3>7. Bản đồ "yêu cầu pháp lý ↔ kiểm soát kỹ thuật"</h3>
+    <table>
+      <thead><tr><th>Yêu cầu (TT 53/2026, Luật AI)</th><th>Kiểm soát kỹ thuật / bằng chứng nên có</th></tr></thead>
+      <tbody>
+        <tr><td>Phân loại rủi ro + danh mục hệ thống AI</td><td>AI system inventory (owner, mục đích, dữ liệu, mức rủi ro, ngày rà soát); quy trình phân loại có phê duyệt</td></tr>
+        <tr><td>Kiểm soát con người, khả năng can thiệp</td><td>Human-in-the-loop/approval workflow; kill switch; phân biệt giao dịch AI vs người trong log</td></tr>
+        <tr><td>Đánh giá an ninh trước go-live &amp; định kỳ</td><td>Red teaming, guardrails, prompt injection tests, model extraction tests; báo cáo pentest AI</td></tr>
+        <tr><td>Dữ liệu hợp pháp, DPIA/TIA</td><td>Data lineage, consent record, DPIA hồ sơ, TIA cho cloud nước ngoài; phân loại dữ liệu</td></tr>
+        <tr><td>Versioning &amp; change management</td><td>Model/prompt registry, change log, test results, rollback; phê duyệt thay đổi</td></tr>
+        <tr><td>Xử lý sự cố</td><td>Runbook sự cố AI, observability (tracing, log), quy trình báo cáo nội bộ/đối ngoại</td></tr>
+        <tr><td>Rủi ro bên thứ ba</td><td>Vendor due diligence, hợp đồng dữ liệu, đánh giá data residency, exit plan</td></tr>
+      </tbody>
+    </table>
+
+    <h3>8. Tám việc phải xong (checklist có deadline)</h3>
+    <table>
+      <thead><tr><th>#</th><th>Việc</th><th>Căn cứ</th><th>Hạn</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Lập <strong>danh mục hệ thống AI</strong> đang và sẽ dùng trong nghiệp vụ khách hàng</td><td>Điều 4</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>2</td><td><strong>Phân loại rủi ro</strong> từng hệ thống (cao/trung bình/thấp), có phê duyệt</td><td>Luật AI + Điều 4</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>3</td><td>Thiết kế <strong>kiểm soát con người</strong> + điều kiện tự động hoá; thỏa thuận khách hàng cho giao dịch tự động</td><td>Điều 5</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>4</td><td>Quy trình <strong>đánh giá an ninh AI</strong> trước go-live, định kỳ, khi thay đổi (kịch bản prompt injection, model extraction, data poisoning)</td><td>Điều 6</td><td>Trước 15/11/2026 (một số nội dung từ 01/09/2027)</td></tr>
+        <tr><td>5</td><td>Chính sách <strong>nguồn gốc dữ liệu</strong> huấn luyện/kiểm thử/vận hành + DPIA/TIA</td><td>Điều 7; Luật 91/2025; NĐ 356/2025</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>6</td><td><strong>Versioning mô hình/prompt</strong> + quản lý thay đổi</td><td>Điều 8</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>7</td><td><strong>Quy trình xử lý sự cố AI</strong> + observability</td><td>Điều 9</td><td>Trước 15/11/2026</td></tr>
+        <tr><td>8</td><td><strong>Đánh giá rủi ro bên thứ ba</strong> (LLM/vendor) + hợp đồng dữ liệu</td><td>TT 53/2026</td><td>Trước 15/11/2026</td></tr>
+      </tbody>
+    </table>
+
+    <h3>9. Ba câu hỏi cho Ban điều hành</h3>
+    <ol>
+      <li>Chúng ta có <strong>danh mục hệ thống AI</strong> chưa — và ai là người chịu trách nhiệm cập nhật hằng năm?</li>
+      <li>Hệ thống nào là <strong>rủi ro cao</strong>, và bằng chứng nào chứng minh con người kiểm soát được quyết định của nó?</li>
+      <li>Khi kiểm toán hỏi "vì sao hệ thống ra quyết định X vào ngày Y", chúng ta đưa ra <strong>log, phiên bản mô hình và hồ sơ đánh giá</strong> nào?</li>
+    </ol>
+
+    <hr>
+    <p><a href="../assets/AI_Banking_Law_2026_Carousel.pdf"><strong>Tải carousel 8 trang (PDF, 1080×1350)</strong></a> — bản tóm tắt để đăng LinkedIn hoặc dùng trong buổi họp nội bộ.</p>
+    <p class="meta"><strong>Nguồn (đối chiếu 11/2026):</strong> Luật Trí tuệ nhân tạo 134/2025/QH15 (hiệu lực 01/03/2026); NĐ 142/2026/NĐ-CP; Thông tư 53/2026/TT-NHNN (hiệu lực 15/11/2026; Điều 14 từ 01/01/2027; điểm b khoản 1 Điều 6 và Điều 21 từ 01/09/2027); Luật BVDLCN 91/2025/QH15 + NĐ 356/2025/NĐ-CP; TT 50/2024/TT-NHNN + TT 77/2025/TT-NHNN; TT 39/2016/TT-NHNN + TT 29/2026/TT-NHNN; NĐ 94/2025/NĐ-CP; OWASP Top 10 for LLM Applications; MITRE ATLAS; NIST AI RMF; ISO/IEC 42001.</p>
+    <p class="meta">Đây là ghi chú nghiên cứu, <strong>không phải tư vấn pháp lý</strong>. Đối chiếu văn bản gốc trên chinhphu.vn / sbv.gov.vn trước khi ban hành quy định nội bộ. Views are my own.</p>
+  </article>
+</main>
+<footer class="site"><div class="wrap">Study hub · Vũ Đình Chung · Views are my own.</div></footer>
+</body>
+</html>
